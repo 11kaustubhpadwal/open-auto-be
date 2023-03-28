@@ -12,7 +12,7 @@ router.post("/", async (req, res) => {
       email,
     });
     await user.save();
-    res.status(400).json({ msg: "Thank you." });
+    res.json({ msg: "Thank you." });
   } catch (error) {
     res.status(400).json({ msg: "Failed to submit. Please try again." });
   }
